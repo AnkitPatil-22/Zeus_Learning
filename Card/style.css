@@ -1,0 +1,49 @@
+body {
+    font-family: Roboto, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; */
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    width: 400px;
+    height: 138px;
+    margin: 4px auto;
+    border: 1px solid black;
+}
+
+.card-img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    margin-right: 14px;
+    padding-left: 4px;
+}
+
+.card-username {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 20px;
+}
+
+.card-stats {
+    font-size: 15px;
+    color: #858991;
+}
+
+.card-stats span {
+    margin-right: 24px;
+}
+
+i {
+    font-size: 20px;
+    margin-right: 4px;
+}

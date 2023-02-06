@@ -1,0 +1,85 @@
+.card {
+    width: 476px;
+    height: 246px;
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 2px;
+
+    .card-body {
+        position: relative;
+        display: flex;
+        padding: 0;
+        margin: 20px 0 0px;
+        /* line-height: 30px; */
+
+        .favourite {
+            position: absolute;
+            right: 0;
+        }
+
+        .displayImg {
+            width: 132px;
+            height: 157px;
+            object-fit: cover;
+        }
+
+        .card-desc {
+            margin-left: 15px;
+            margin-right: 20px;
+            width: 100%;
+        }
+
+        .card-name {
+            font-size: $fontMedium;
+            max-height: 45px;
+            // line-height: 20px;
+            font-weight: bold;
+            overflow: hidden;
+            margin-bottom: 7px;
+            width: 250px;
+        }
+
+        .card-text {
+            font-size: $fontSmall;
+            font-weight: bold;
+            color: #666666;
+            margin-bottom: 3px;
+            /* line-height: 20px; */
+
+            .hr {
+                border-right: 1px solid #0000001f;
+                padding-right: 10px;
+                margin-right: 5px;
+            }
+
+            .bold {
+                color: #222222;
+            }
+
+            .green {
+                color: #1f7a54;
+            }
+        }
+
+        .select {
+            margin-bottom: 5px;
+            margin-top: 15px;
+
+            select {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .card-footer {
+        margin-top: 20px;
+        padding: 15px 20px 0px;
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $borderColor;
+
+        img.disabled {
+            opacity: 0.4;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+$fontSmall: 12px;
+$fontMedium: 16px;
+
+@font-face {
+    font-family: quicksand;
+    src: url(../assets/Quicksand-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eeeeee;
+    color: #222222;
+    font-family: quicksand;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+@mixin flexCenter($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}

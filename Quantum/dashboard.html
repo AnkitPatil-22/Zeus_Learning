@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+
+        <link rel="stylesheet" type="text/css" href="./styles/dashboard.css" />
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="#" class="nav-logo"><img src="./assets/icons/logo_header.svg" /></a>
+
+            <div>
+                <ul class="navbar-nav">
+                    <li class="navbar-item active">
+                        <a href="#" class="nav-link">DASHBOARD</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">CONTENT</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">USERS</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">REPORTS</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">ADMIN</a>
+                    </li>
+                </ul>
+
+                <ul class="alert-icons">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/icons/alerts.svg" />
+                            <span class="badge blue">2</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/icons/announcements.svg" />
+                            <span class="badge blue">1</span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/icons/account_circle.svg" />
+                            <span class="badge white">T</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <button class="hamburger-menu">
+                <img src="./assets/icons/hamburger-menu.svg" />
+            </button>
+        </nav>
+
+        <div class="dashboard-container">
+            <div class="menu">
+                <div class="menu-item active"><img src="./assets/icons/courses.svg" /><span>4</span> Courses</div>
+                <div class="menu-item"><img src="./assets/icons/classes.svg" /><span>4</span> Classes</div>
+            </div>
+            <div class="info">
+                <div class="total-course">Showing 4 of 4 courses</div>
+                <div class="sort-course">
+                    <p>Sort By:</p>
+                    <div class="sort">
+                        <select name="sort">
+                            <option value="Course Name">Course Name</option>
+                            <option value="Professors">Professors</option>
+                            <option value="Units">Number of Units</option>
+                        </select>
+                    </div>
+                    <img src="./assets/icons/sort.svg" />
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="card">
+                    <div class="card-body">
+                        <img src="./assets/icons/favourite.svg" class="favourite" />
+                        <img src="./assets/images/imageMask-1.svg" class="displayImg" />
+                        <div class="card-desc">
+                            <div class="card-name">Acceleration</div>
+                            <div class="card-text">
+                                <span class="hr">Physics</span> Grade 7 <span class="green">+2</span>
+                            </div>
+                            <div class="card-text">
+                                <span class="bold">4</span> units <span class="bold">18</span> lessons
+                                <span class="bold">24</span> topics
+                            </div>
+                            <div class="select">
+                                <select name="class">
+                                    <option value="All Classes">All Classes</option>
+                                    <option value="Class A">Class A</option>
+                                    <option value="Class B">Class B</option>
+                                </select>
+                            </div>
+                            <div class="card-text"><span class="hr">50 Students</span> 21-Jan-2020 - 21-Aug-2020</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">
+                            <img src="./assets/icons/preview.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/manage_course.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/grade_submissions.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/reports.svg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img src="./assets/icons/favourite.svg" class="favourite" />
+                        <img src="./assets/images/imageMask-1.png" class="displayImg" />
+                        <div class="card-desc">
+                            <div class="card-name">Displacement, Velocity and Speed</div>
+                            <div class="card-text">
+                                <span class="hr">Physics 2</span> Grade 6 <span class="green">+3</span>
+                            </div>
+                            <div class="card-text">
+                                <span class="bold">2</span> units <span class="bold">15</span> lessons
+                                <span class="bold">20</span> topics
+                            </div>
+                            <div class="select">
+                                <select name="class" class="disabled">
+                                    <option disabled selected value="All Classes">No Classes</option>
+                                </select>
+                            </div>
+                            <div class="card-text"><span class="hr">50 Students</span> 21-Jan-2020 - 21-Aug-2020</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">
+                            <img src="./assets/icons/preview.svg" />
+                        </a>
+                        <a href="#">
+                            <img class="disabled" src="./assets/icons/manage_course.svg" />
+                        </a>
+                        <a href="#">
+                            <img class="disabled" src="./assets/icons/grade_submissions.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/reports.svg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img src="./assets/icons/favourite.svg" class="favourite" />
+                        <img src="./assets/images/imageMask-2.svg" class="displayImg" />
+                        <div class="card-desc">
+                            <div class="card-name">Introduction to Biology: Micro organisms and how they affec...</div>
+                            <div class="card-text">
+                                <span class="hr">Biology</span> Grade 4 <span class="green">+1</span>
+                            </div>
+                            <div class="card-text">
+                                <span class="bold">5</span> units <span class="bold">16</span> lessons
+                                <span class="bold">22</span> topics
+                            </div>
+                            <div class="select">
+                                <select name="class">
+                                    <option value="All Classes">All Classes</option>
+                                    <option value="Class A">Class A</option>
+                                    <option value="Class B">Class B</option>
+                                </select>
+                            </div>
+                            <div class="card-text">300 Students</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">
+                            <img src="./assets/icons/preview.svg" />
+                        </a>
+                        <a href="#">
+                            <img class="disabled" src="./assets/icons/manage_course.svg" />
+                        </a>
+                        <a href="#">
+                            <img class="disabled" src="./assets/icons/grade_submissions.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/reports.svg" />
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <img src="./assets/icons/favourite.svg" class="favourite" />
+                        <img src="./assets/images/imageMask-2.png" class="displayImg" />
+                        <div class="card-desc">
+                            <div class="card-name">Introduction to High School Mathematics</div>
+                            <div class="card-text">
+                                <span class="hr">Mathematics</span> Grade 8 <span class="green">+3</span>
+                            </div>
+                            <!-- <div class="card-text">
+                                <span class="bold">4</span> units <span class="bold">18</span> lessons
+                                <span class="bold">24</span> topics
+                            </div> -->
+                            <div class="select">
+                                <select name="class">
+                                    <option value="All Classes">Mr. Frank's Class A</option>
+                                    <option value="Class A">Class A</option>
+                                    <option value="Class B">Class B</option>
+                                </select>
+                            </div>
+                            <div class="card-text"><span class="hr">44 Students</span> 14-Oct-2019 - 20-Oct-2020</div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#">
+                            <img src="./assets/icons/preview.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/manage_course.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/grade_submissions.svg" />
+                        </a>
+                        <a href="#">
+                            <img src="./assets/icons/reports.svg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="other-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <footer>
+                <img src="./assets/icons/logo_footer.svg" />
+                <p>Copyright © 2020-2021</p>
+                <p><b>Zeus Systems Pvt. Ltd.</b></p>
+                <p>All rights reserved.</p>
+            </footer>
+        </div>
+
+        <script src="index.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

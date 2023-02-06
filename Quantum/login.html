@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link rel="stylesheet" href="./styles/login.css" />
+    </head>
+    <body>
+        <nav>
+            <img class="nav-logo" src="./assets/icons/logo_header.svg" alt="" />
+        </nav>
+        <div class="login-container">
+            <img src="./assets/icons/back.svg" class="back-icon" />
+            <h1>Log in with Quantum</h1>
+            <form>
+                <div class="radio">
+                    <input name="radio1" type="radio" id="district" />
+                    <label for="district">District</label>
+
+                    <input name="radio1" type="radio" id="school" />
+                    <label for="school">Independent School</label>
+                </div>
+                <div class="select">
+                    <label for="state">State*</label>
+                    <select name="state" id="state">
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                    </select>
+                </div>
+                <div class="select">
+                    <label for="district2">District*</label>
+                    <select name="district" id="district2">
+                        <option value="Maharashtra">Pune</option>
+                        <option value="Goa">Jalgaon</option>
+                        <option value="Gujarat">Nashik</option>
+                    </select>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Username/Email ID*" />
+                    <p class="forget">FORGET USERNAME?</p>
+                </div>
+                <div class="input">
+                    <input type="password" placeholder="Password*" id="password" />
+                    <p class="forget">FORGET PASSWORD?</p>
+                    <img src="./assets/icons/preview.svg" class="preview-icon" onclick="previewPassword()" />
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox" id="remember_me" />
+                    <label for="remember_me">Remember me</label>
+                </div>
+                <div class="submit">
+                    <button>LOG IN</button>
+                </div>
+            </form>
+        </div>
+        <div class="bottom-bar">
+            <div class="other-links">
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <footer>
+                <img src="./assets/icons/logo_footer.svg" />
+                <p>Copyright © 2020-2021</p>
+                <p><b>Zeus Systems Pvt. Ltd.</b></p>
+                <p>All rights reserved.</p>
+            </footer>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
