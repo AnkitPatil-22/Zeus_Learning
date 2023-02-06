@@ -1,15 +1,18 @@
 .card {
-    width: 476px;
+    position: relative;
+    width: 100%;
+    max-width: 550px;
     height: 246px;
     padding: 0 20px;
     background-color: #fff;
     border-radius: 2px;
+    overflow: hidden;
 
     .card-body {
         position: relative;
         display: flex;
         padding: 0;
-        margin: 20px 0 0px;
+        margin: 24px 0 0px;
         /* line-height: 30px; */
 
         .favourite {
@@ -47,9 +50,9 @@
             /* line-height: 20px; */
 
             .hr {
-                border-right: 1px solid #0000001f;
-                padding-right: 10px;
-                margin-right: 5px;
+                border-left: 1px solid #0000001f;
+                padding-left: 10px;
+                margin-left: 8px;
             }
 
             .bold {
@@ -72,14 +75,27 @@
     }
 
     .card-footer {
-        margin-top: 20px;
+        margin-top: 16px;
         padding: 15px 20px 0px;
         display: flex;
         justify-content: space-between;
         border-top: 1px solid $borderColor;
 
-        img.disabled {
+        a.disabled {
             opacity: 0.4;
         }
+    }
+
+    .expired {
+        @include flexCenter(center, center);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        background-color: #ffe4e6;
+        font-size: 12px;
+        font-weight: bold;
+        color: #d80000;
+        padding: 0 5px;
     }
 }

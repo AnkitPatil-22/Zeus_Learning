@@ -288,17 +288,20 @@ footer P {
 }
 
 .card {
-  width: 476px;
+  position: relative;
+  width: 100%;
+  max-width: 550px;
   height: 246px;
   padding: 0 20px;
   background-color: #fff;
   border-radius: 2px;
+  overflow: hidden;
 }
 .card .card-body {
   position: relative;
   display: flex;
   padding: 0;
-  margin: 20px 0 0px;
+  margin: 24px 0 0px;
   /* line-height: 30px; */
 }
 .card .card-body .favourite {
@@ -332,9 +335,9 @@ footer P {
   /* line-height: 20px; */
 }
 .card .card-body .card-text .hr {
-  border-right: 1px solid rgba(0, 0, 0, 0.1215686275);
-  padding-right: 10px;
-  margin-right: 5px;
+  border-left: 1px solid rgba(0, 0, 0, 0.1215686275);
+  padding-left: 10px;
+  margin-left: 8px;
 }
 .card .card-body .card-text .bold {
   color: #222222;
@@ -350,14 +353,28 @@ footer P {
   font-weight: bold;
 }
 .card .card-footer {
-  margin-top: 20px;
+  margin-top: 16px;
   padding: 15px 20px 0px;
   display: flex;
   justify-content: space-between;
   border-top: 1px solid rgba(33, 62, 84, 0.2392156863);
 }
-.card .card-footer img.disabled {
+.card .card-footer a.disabled {
   opacity: 0.4;
+}
+.card .expired {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  background-color: #ffe4e6;
+  font-size: 12px;
+  font-weight: bold;
+  color: #d80000;
+  padding: 0 5px;
 }
 
 .dashboard-container {
@@ -435,6 +452,8 @@ footer P {
   grid-template-columns: repeat(auto-fit, minmax(476px, 1fr));
   justify-items: center;
   align-items: center;
+  justify-content: center;
+  align-content: center;
   grid-gap: 24px;
   margin: auto;
   margin-top: 30px;
