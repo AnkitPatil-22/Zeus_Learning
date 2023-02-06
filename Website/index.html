@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Web Page</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <h1>My first web page</h1>
+        <h2>What this is</h2>
+        <p>
+            Welcome to my <em>first</em> webpage.I created this webpage without the assistance of webpage editor. Just
+            my little text editor and a keen <strong>understanding of html.</strong>
+        </p>
+        <h2>What this is</h2>
+        <ul>
+            <li>To learn HTML</li>
+            <li>
+                List element
+                <ol>
+                    <li>Home</li>
+                    <li>FAQ</li>
+                    <li>Contact</li>
+                    <li>About</li>
+                </ol>
+            </li>
+            <li>Here I created ordered and unordered list</li>
+        </ul>
+        <h2>ZeusLearning.com</h2>
+        <a href="https://www.zeuslearning.com/" target="_blank">This link will open zeuslearning.com in new tab</a>
+        <h2>On click the following image will navigate to Google.com</h2>
+        <a href="https://google.com"
+            ><img
+                src="https://storage.googleapis.com/gd-wagtail-prod-assets/original_images/evolving_google_identity_2x1.jpg"
+                alt="Google Logo"
+                width="200px"
+        /></a>
+        <h3>Some random table</h3>
+        <table>
+            <tr>
+                <td>Row 1, cell 1</td>
+                <td>Row 1, cell 2</td>
+                <td>Row 1, cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 2, cell 1</td>
+                <td>Row 2, cell 2</td>
+                <td>Row 2, cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 3, cell 1</td>
+                <td>Row 3, cell 2</td>
+                <td>Row 3, cell 3</td>
+            </tr>
+            <tr>
+                <td>Row 4, cell 1</td>
+                <td>Row 4, cell 2</td>
+                <td>Row 4, cell 3</td>
+            </tr>
+        </table>
+        <h3>Some random form</h3>
+        <form class="form" id="form">
+            <p><span>Note:</span> It looks the part, but won't do anything.</p>
+            <div class="form-control">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Your name" id="name" />
+            </div>
+            <div class="form-control">
+                <label for="comment">Comments:</label>
+                <textarea cols="30" rows="10" placeholder="Your comments" id="comment"></textarea>
+            </div>
+            <div class="form-control" id="gender">
+                <p>Are you:</p>
+                <input type="radio" value="Male" name="gender" id="male" />
+                <label>Male</label><br />
+                <input type="radio" value="Female" name="gender" id="female" />
+                <label>Female</label>
+            </div>
+            <div class="form-control">
+                <br />
+                <input type="submit" value="Submit Query" />
+            </div>
+        </form>
+
+        <script src="index.js"></script>
+    </body>
+</html>

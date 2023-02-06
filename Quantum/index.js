@@ -27,6 +27,9 @@ async function getCards() {
     expired.innerHTML = "EXPIRED";
 
     data.forEach((card) => {
+        let div = document.createElement("div");
+        div.classList.add("card");
+
         let new_card = `
                 <div class="card-body">
                     ${card.favourite ? `<img src="./assets/icons/favourite.svg" class="favourite" />` : ""}
@@ -35,7 +38,7 @@ async function getCards() {
                         <div class="card-name">${card.desc.title}</div>
                         <div class="card-text">${card.desc.subject}
                             <span class="hr">Grade ${card.desc.grade[0]}</span> 
-                            <span class="green">${card.desc.grade[1]}</span>
+                            <span class="green">+${card.desc.grade.length - 1}</span>
                         </div>
                         <div class="card-text">
                             <span class="bold">${card.desc.syllabus.units}</span> units 
@@ -52,7 +55,7 @@ async function getCards() {
                         <div class="card-text">${card.desc.students} Students
                             ${
                                 card.desc.dates
-                                    ? `<span class="hr">${card.desc.dates.start} - ${card.desc.dates.end}</span> `
+                                    ? `<span class="hr">${card.desc.dates.start} - ${card.desc.dates.end}</span>`
                                     : ""
                             }
                         </div>
@@ -74,8 +77,6 @@ async function getCards() {
                 </div>
         `;
 
-        let div = document.createElement("div");
-        div.classList.add("card");
         div.innerHTML = new_card;
         if (card.expired) {
             div.appendChild(expired);

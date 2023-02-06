@@ -1,6 +1,9 @@
+@import "./base";
+@import "./colors";
+
 nav {
     @include flexCenter(center, space-between);
-    background-color: #25313f;
+    background-color: $navBackground;
     background-image: url(../assets/icons/header_pattern.svg);
     background-size: cover;
     background-blend-mode: hard-light;
@@ -25,7 +28,7 @@ nav {
 
         a {
             text-decoration: none;
-            color: #3fd28b;
+            color: $lightGreen;
             padding: 0 5px;
             font-size: 14px;
         }
@@ -75,7 +78,7 @@ nav {
             background-color: #2a7ff3;
         }
         &.white {
-            color: #25313f;
+            color: $navBackground;
             font-weight: bold;
             font-size: 10px;
             background-color: #fff;
@@ -107,19 +110,13 @@ nav {
 }
 
 @media screen and (max-width: 1000px) {
-    .navbar {
-        // flex-direction: column;
-        // justify-content: flex-start;
-        // align-items: flex-start;
-    }
-
     .navbar-nav {
         display: none;
 
         &.active {
             display: flex;
             position: fixed;
-            background: #25313f;
+            background: $navBackground;
             top: 56px;
             left: 0;
             width: 100%;

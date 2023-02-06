@@ -1,9 +1,12 @@
+@import "./base";
+@import "./colors";
+
 .other-links {
     text-align: center;
     margin-bottom: 15px;
 
     a {
-        color: #1f7a54;
+        color: $darkGreen;
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -11,7 +14,7 @@
 
         &:first-child {
             padding: 0 15px;
-            border-right: 1px solid #0000001f;
+            border-right: 1px solid $borderColor;
         }
     }
 }
@@ -27,7 +30,7 @@ footer {
         height: 27px;
         margin-right: 10px;
         padding-right: 20px;
-        border-right: 1px solid #0000001f;
+        border-right: 1px solid $borderColor;
     }
 
     P {

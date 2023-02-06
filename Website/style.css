@@ -1,0 +1,74 @@
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: lemonchiffon;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: lemonchiffon;
+    background-color: darkred;
+    padding: 10px 0;
+    margin-top: 0;
+    font-style: italic;
+    word-spacing: 15px;
+    letter-spacing: 15px;
+    border-bottom: 15px solid red;
+}
+
+h2 {
+    background-color: green;
+    color: white;
+    padding: 5px 10px;
+}
+
+strong {
+    text-transform: uppercase;
+}
+
+ul {
+    color: firebrick;
+    font-style: italic;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 3px dashed lightgray;
+}
+
+h3 {
+    color: lightslategray;
+}
+
+table {
+    background-color: lightgray;
+}
+
+span {
+    font-style: italic;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input[type="text"],
+textarea {
+    display: block;
+}
+
+input[type="radio"] {
+    margin-top: 15px;
+}
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}

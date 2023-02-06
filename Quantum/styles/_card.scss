@@ -1,3 +1,6 @@
+@import "./base";
+@import "./colors";
+
 .card {
     position: relative;
     width: 100%;
@@ -45,22 +48,22 @@
         .card-text {
             font-size: $fontSmall;
             font-weight: bold;
-            color: #666666;
+            color: $secondaryText;
             margin-bottom: 3px;
             /* line-height: 20px; */
 
             .hr {
-                border-left: 1px solid #0000001f;
+                border-left: 1px solid $borderColor;
                 padding-left: 10px;
                 margin-left: 8px;
             }
 
             .bold {
-                color: #222222;
+                color: $primaryText;
             }
 
             .green {
-                color: #1f7a54;
+                color: $darkGreen;
             }
         }
 
@@ -92,10 +95,10 @@
         top: 0;
         left: 0;
         height: 18px;
-        background-color: #ffe4e6;
+        background-color: $lightRed;
         font-size: 12px;
         font-weight: bold;
-        color: #d80000;
+        color: $red;
         padding: 0 5px;
     }
 }

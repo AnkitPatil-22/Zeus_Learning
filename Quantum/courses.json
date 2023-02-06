@@ -5,7 +5,7 @@
         "desc": {
             "title": "Acceleration",
             "subject": "Physics",
-            "grade": ["7", "+2"],
+            "grade": [7, 8, 9],
             "syllabus": {
                 "units": 4,
                 "lessons": 18,
@@ -27,7 +27,7 @@
         "desc": {
             "title": "Displacement, Velocity and Speed",
             "subject": "Physics 2",
-            "grade": ["6", "+3"],
+            "grade": [6, 7, 8, 9],
             "syllabus": {
                 "units": 2,
                 "lessons": 15,
@@ -49,7 +49,7 @@
         "desc": {
             "title": "Introduction to Biology: Micro organisms and how they affec...",
             "subject": "Biology",
-            "grade": ["4", "+1"],
+            "grade": [4, 5],
             "syllabus": {
                 "units": 5,
                 "lessons": 16,
@@ -67,7 +67,7 @@
         "desc": {
             "title": "Introduction to High School Mathematics",
             "subject": "Mathematics",
-            "grade": ["8", "+3"],
+            "grade": [8, 9, 10, 11],
             "syllabus": {
                 "units": 5,
                 "lessons": 16,

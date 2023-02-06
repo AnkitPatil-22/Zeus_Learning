@@ -1,9 +1,10 @@
 @import "./input";
 @import "./footer";
 @import "./base";
+@import "./colors";
 
 nav {
-    background-color: #25313f;
+    background-color: $navBackground;
     background-image: url(../assets/icons/header_pattern.svg);
     background-size: cover;
     background-blend-mode: hard-light;
@@ -24,7 +25,7 @@ nav {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 30px;
-    border-top: 4px solid #3ac7ec;
+    border-top: 4px solid $lightBlue;
 
     h1 {
         text-align: center;

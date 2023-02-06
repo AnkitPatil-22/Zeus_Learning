@@ -1,4 +1,5 @@
-$borderColor: #213e543d;
+@import "./base";
+@import "./colors";
 
 // select:focus,
 // option:focus,
@@ -15,11 +16,11 @@ $borderColor: #213e543d;
         font-family: quicksand;
         width: 100%;
         border: none;
-        color: #666666;
+        color: $secondaryText;
         margin: 10px 0 5px;
     }
     .forget {
-        color: #1f7a54;
+        color: $darkGreen;
         position: absolute;
         font-size: 14px;
         font-weight: 600;
@@ -40,7 +41,7 @@ $borderColor: #213e543d;
     border-bottom: 1px solid $borderColor;
 
     label {
-        color: #666666;
+        color: $secondaryText;
         font-size: $fontSmall;
         font-weight: 700;
     }
@@ -49,7 +50,7 @@ $borderColor: #213e543d;
         display: block;
         width: 100%;
         border: none;
-        color: #222222;
+        color: $primaryText;
         font-size: $fontMedium;
         font-family: quicksand;
         margin: 10px 0 5px -4px;
@@ -66,7 +67,7 @@ $borderColor: #213e543d;
     align-items: center;
 
     input {
-        accent-color: #1f7a54;
+        accent-color: $darkGreen;
         transform: scale(1.5);
         height: 20px;
     }
@@ -85,7 +86,7 @@ $borderColor: #213e543d;
     align-items: center;
 
     input {
-        accent-color: #1f7a54;
+        accent-color: $darkGreen;
         transform: scale(1.5);
         height: 20px;
     }
@@ -105,6 +106,6 @@ $borderColor: #213e543d;
     height: 40px;
     border: none;
     border-radius: 5px;
-    background-color: #3fd28b;
+    background-color: $lightGreen;
     box-shadow: 0px 3px 5px #0000003d;
 }

@@ -1,3 +1,5 @@
+@import "./colors";
+
 $fontSmall: 12px;
 $fontMedium: 16px;
 
@@ -14,7 +16,7 @@ $fontMedium: 16px;
 
 body {
     background: #eeeeee;
-    color: #222222;
+    color: $primaryText;
     font-family: quicksand;
     position: relative;
     min-height: 100vh;

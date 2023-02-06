@@ -17,6 +17,25 @@ body {
   padding-bottom: 100px;
 }
 
+@font-face {
+  font-family: quicksand;
+  src: url(../assets/Quicksand-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeeeee;
+  color: #222222;
+  font-family: quicksand;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -149,6 +168,25 @@ nav div {
     right: 94px;
   }
 }
+@font-face {
+  font-family: quicksand;
+  src: url(../assets/Quicksand-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeeeee;
+  color: #222222;
+  font-family: quicksand;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
 .other-links {
   text-align: center;
   margin-bottom: 15px;
@@ -162,7 +200,7 @@ nav div {
 }
 .other-links a:first-child {
   padding: 0 15px;
-  border-right: 1px solid rgba(0, 0, 0, 0.1215686275);
+  border-right: 1px solid rgba(33, 62, 84, 0.2392156863);
 }
 
 footer {
@@ -176,7 +214,7 @@ footer img {
   height: 27px;
   margin-right: 10px;
   padding-right: 20px;
-  border-right: 1px solid rgba(0, 0, 0, 0.1215686275);
+  border-right: 1px solid rgba(33, 62, 84, 0.2392156863);
 }
 footer P {
   font-size: 12px;
@@ -189,6 +227,25 @@ footer P {
   position: absolute;
   bottom: 0px;
   width: 100%;
+}
+
+@font-face {
+  font-family: quicksand;
+  src: url(../assets/Quicksand-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeeeee;
+  color: #222222;
+  font-family: quicksand;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
 }
 
 .input {
@@ -287,6 +344,25 @@ footer P {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2392156863);
 }
 
+@font-face {
+  font-family: quicksand;
+  src: url(../assets/Quicksand-VariableFont_wght.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eeeeee;
+  color: #222222;
+  font-family: quicksand;
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
 .card {
   position: relative;
   width: 100%;
@@ -335,7 +411,7 @@ footer P {
   /* line-height: 20px; */
 }
 .card .card-body .card-text .hr {
-  border-left: 1px solid rgba(0, 0, 0, 0.1215686275);
+  border-left: 1px solid rgba(33, 62, 84, 0.2392156863);
   padding-left: 10px;
   margin-left: 8px;
 }
