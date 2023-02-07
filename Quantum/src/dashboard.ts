@@ -1,34 +1,18 @@
-// LOGIN
-const password_field = document.getElementById("password");
+import { Card } from "./interface";
 
-const previewPassword = () => {
-    if (password_field.type === "password") {
-        password_field.type = "text";
-    } else {
-        password_field.type = "password";
-    }
-};
-
-// DASHBOARD
-const toggleBtn = document.querySelector(".hamburger-menu");
-const navLinks = document.querySelector(".navbar-nav");
-const gridContainer = document.querySelector(".grid-container");
-
-toggleBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
+const gridContainer = document.querySelector(".grid-container") as HTMLDivElement;
 
 let url = "./courses.json";
 
 async function getCards() {
     const response = await fetch(url);
-    const data = await response.json();
+    const data: Card[] = await response.json();
 
     let expired = document.createElement("div");
     expired.classList.add("expired");
     expired.innerHTML = "EXPIRED";
 
-    data.forEach((card) => {
+    data.forEach((card: Card) => {
         let div = document.createElement("div");
         div.classList.add("card");
 
@@ -51,7 +35,7 @@ async function getCards() {
                             <select name="class" class="${card.desc.options ? "" : "disabled"}">
                                 ${
                                     card.desc.options
-                                        ? card.desc.options.map((option) => {
+                                        ? card.desc.options.map((option: string) => {
                                               return `<option value=""> ${option} </option>`;
                                           })
                                         : `<option value=""> No Classes </option>`
