@@ -7,6 +7,15 @@
         <title>Dashboard</title>
 
         <link rel="stylesheet" type="text/css" href="./styles/dashboard.css" />
+
+        <!-- Fontawesone -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
     <body>
         <nav class="navbar">
@@ -32,17 +41,159 @@
                 </ul>
 
                 <ul class="alert-icons">
-                    <li class="navbar-item">
+                    <li class="navbar-item dropdown">
                         <a href="#" class="nav-link">
                             <img src="./assets/icons/alerts.svg" />
                             <span class="badge blue">2</span>
                         </a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-btn">
+                                <button>SHOW ALL</button><button class="border-left">CREATE NEW</button>
+                            </div>
+                            <div class="messages">
+                                <a class="nav-link" href="#">
+                                    <p>
+                                        <span class="grey">PA:</span> Wilson Kumar
+                                        <i class="fa-solid fa-circle-check float-right"></i>
+                                    </p>
+                                    <p class="message">No classes will be held on 21st Nov</p>
+                                    <p class="grey">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                        2 files are attached<span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link bg-2" href="#">
+                                    <p>
+                                        <span class="grey">PA:</span> Samson White
+                                        <i class="fa-solid fa-circle-minus float-right"></i>
+                                    </p>
+                                    <p class="message">Guest lecture on Geometry on 20th September</p>
+                                    <p class="grey">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                        2 files are attached<span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <p>
+                                        <span class="grey">PA:</span> Wilson Kumar
+                                        <i class="fa-solid fa-circle-check float-right"></i>
+                                    </p>
+                                    <p class="message">Additional course materials available on request</p>
+                                    <p class="grey">Course: Mathematics 101</p>
+                                    <p class="grey">
+                                        <span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link bg-2" href="#">
+                                    <p>
+                                        <span class="grey">PA:</span> Wilson Kumar
+                                        <i class="fa-solid fa-circle-minus float-right"></i>
+                                    </p>
+                                    <p class="message">No classes will be held on 25th Dec</p>
+                                    <p class="grey">
+                                        <span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link bg-2" href="#">
+                                    <p>
+                                        <span class="grey">PA:</span> Samson White
+                                        <i class="fa-solid fa-circle-minus float-right"></i>
+                                    </p>
+                                    <p class="message">Guest lecture on Geometry on 20th September</p>
+                                    <p class="grey">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                        2 files are attached<span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link bg-2" href="#">
+                                    <p>
+                                        <span class="grey">PA:</span> Samson White
+                                        <i class="fa-solid fa-circle-minus float-right"></i>
+                                    </p>
+                                    <p class="message">Guest lecture on Geometry on 20th September</p>
+                                    <p class="grey">
+                                        <i class="fa-solid fa-paperclip"></i>
+                                        2 files are attached<span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
                     </li>
-                    <li class="navbar-item">
+                    <li class="navbar-item dropdown">
                         <a href="#" class="nav-link">
                             <img src="./assets/icons/announcements.svg" />
                             <span class="badge blue">1</span>
                         </a>
+                        <div class="dropdown-content">
+                            <div class="dropdown-btn">
+                                <button>SHOW ALL</button>
+                            </div>
+                            <div class="messages">
+                                <a class="nav-link bg-2" href="#">
+                                    <p class="message alert-msg">
+                                        License for Introduction to Algebra has been assigned to your school
+                                        <i class="fa-solid fa-circle-minus float-right alert-status"></i>
+                                    </p>
+                                    <p class="grey">
+                                        <span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <p class="message alert-msg">
+                                        Lesson 3 Practice Worksheet overdue for Amy Santiago<i
+                                            class="fa-solid fa-circle-check float-right alert-status"
+                                        ></i>
+                                    </p>
+                                    <p><span class="grey">Course:</span> Advanced Mathematics</p>
+                                    <p class="grey">
+                                        <span class="float-right">15-Sep-2018 at 05:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link bg-2" href="#">
+                                    <p class="message alert-msg">
+                                        23 new students created<i
+                                            class="fa-solid fa-circle-minus float-right alert-status"
+                                        ></i>
+                                    </p>
+
+                                    <p class="grey">
+                                        <span class="float-right">14-Sep-2018 at 01:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link bg-2" href="#">
+                                    <p class="message alert-msg">
+                                        15 submissions ready for evaluation<i
+                                            class="fa-solid fa-circle-minus float-right alert-status"
+                                        ></i>
+                                    </p>
+                                    <p><span class="grey">Course:</span> Basic Algebra</p>
+                                    <p class="grey">
+                                        <span class="float-right">13-Sep-2018 at 01:15 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link bg-2" href="#">
+                                    <p class="message alert-msg">
+                                        License for Basic Concepts in Geometry has been assigned to your... school<i
+                                            class="fa-solid fa-circle-minus float-right alert-status"
+                                        ></i>
+                                    </p>
+                                    <p class="grey">
+                                        <span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                                <a class="nav-link" href="#">
+                                    <p class="message alert-msg">
+                                        Lesson 3 Practice Worksheet overdue for Sam Diego<i
+                                            class="fa-solid fa-circle-check float-right alert-status"
+                                        ></i>
+                                    </p>
+                                    <p><span class="grey">Course:</span> Advanced Mathematics</p>
+                                    <p class="grey">
+                                        <span class="float-right">15-Sep-2018 at 07:21 pm</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
                     </li>
                     <li class="navbar-item">
                         <a href="#" class="nav-link">

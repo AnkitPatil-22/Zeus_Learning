@@ -13,6 +13,25 @@ nav {
     div {
         @include flexCenter(center, center);
     }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 }
 
 .navbar-nav {
@@ -48,9 +67,10 @@ nav {
     li {
         position: relative;
         list-style: none;
-        margin-left: 32px;
+        margin-left: 10px;
         margin-top: 4px;
         height: 52px;
+        width: 50px;
         @include flexCenter(center, center);
         border-bottom: 4px solid transparent;
 
@@ -67,7 +87,7 @@ nav {
         @include flexCenter(center, center);
         position: absolute;
         top: 3px;
-        right: -5px;
+        right: 3px;
         min-width: 18px;
         height: 18px;
         border-radius: 10px;
@@ -89,14 +109,129 @@ nav {
     //     width: 21px;
     //     height: 24px;
     // }
-    // li:nth-child(2) a img {
-    //     width: 20px;
-    //     height: 20px;
-    // }
+    li:nth-child(2) a img {
+        width: 20px;
+        // height: 20px;
+    }
     // li:nth-child(3) a img {
     //     width: 32px;
     //     height: 32px;
     // }
+    .navbar-item {
+        .dropdown-content {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            top: 52px;
+            right: 0px;
+            max-height: 582px;
+            background-color: $white;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 3px;
+            z-index: 99;
+            visibility: hidden;
+            transition: 0.3s;
+            opacity: 0;
+
+            .messages {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                overflow-y: auto;
+            }
+
+            a {
+                padding: 16px;
+                width: 315px;
+                max-height: 582px;
+                border-bottom: 1px solid $borderColor;
+                text-decoration: none;
+            }
+            a:last-child {
+                margin-bottom: 50px;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 600;
+                color: $primaryText;
+            }
+            p:last-child {
+                margin-top: 8px;
+            }
+            .message {
+                font-size: 14px;
+                margin: 8px 0;
+            }
+            .grey {
+                color: $secondaryText;
+            }
+            .float-right {
+                float: right;
+            }
+            .fa-paperclip {
+                transform: rotate(-45deg);
+                font-size: 10px;
+            }
+            .fa-circle-check,
+            .fa-circle-minus {
+                color: $darkGreen;
+                font-size: 16px;
+            }
+            .bg-2 {
+                background-color: #ffffee;
+            }
+            .dropdown-btn {
+                position: absolute;
+                width: 100%;
+                height: 48px;
+                background-color: white;
+                bottom: 0;
+                z-index: 999;
+
+                button {
+                    background-color: transparent;
+                    border: none;
+                    width: 100%;
+                    height: 30px;
+                    color: $darkGreen;
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-family: quicksand;
+                }
+                .border-left {
+                    border-left: 1px solid $borderColor;
+                }
+            }
+            .alert-msg {
+                padding-right: 20px;
+                position: relative;
+            }
+            .alert-status {
+                position: absolute;
+                right: 0;
+                top: 3px;
+            }
+        }
+
+        &:hover {
+            .dropdown-content {
+                visibility: visible;
+                transition: 0.3s;
+                opacity: 1;
+            }
+        }
+    }
+
+    .navbar-item.dropdown:hover {
+        .nav-link img {
+            filter: brightness(0) invert(1);
+        }
+        .badge {
+            visibility: hidden;
+        }
+    }
 }
 
 .nav-logo {
@@ -143,6 +278,6 @@ nav {
 
     .alert-icons {
         position: absolute;
-        right: 94px;
+        right: 84px;
     }
 }

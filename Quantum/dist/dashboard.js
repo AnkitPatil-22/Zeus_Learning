@@ -26,20 +26,20 @@ function getCards() {
                     <img src="./assets/icons/favourite.svg" class="favourite ${!card.favourite ? "disable" : ""}" />
                     <img src=${card.image} class="displayImg" />
                     <div class="card-desc">
-                        <div class="card-name">${card.desc.title}</div>
-                        <div class="card-text">${card.desc.subject}
-                            <span class="hr">Grade ${card.desc.grade[0]}</span> 
-                            <span class="green">+${card.desc.grade.length - 1}</span>
+                        <div class="card-name">${card.course_details.title}</div>
+                        <div class="card-text">${card.course_details.subject}
+                            <span class="hr">Grade ${card.course_details.grade[0]}</span> 
+                            <span class="green">+${card.course_details.grade.length - 1}</span>
                         </div>
                         <div class="card-text">
-                            <span class="bold">${card.desc.syllabus.units}</span> units 
-                            <span class="bold">${card.desc.syllabus.lessons}</span> lessons
-                            <span class="bold">${card.desc.syllabus.topics}</span> topics                           
+                            <span class="bold">${card.course_details.syllabus.units}</span> units 
+                            <span class="bold">${card.course_details.syllabus.lessons}</span> lessons
+                            <span class="bold">${card.course_details.syllabus.topics}</span> topics                           
                         </div>
                         <div class="select">
-                            <select name="class" class="${card.desc.options ? "" : "disabled"}">
-                                ${card.desc.options
-                ? card.desc.options.map((option) => {
+                            <select name="class" class="${card.course_details.options ? "" : "disabled"}">
+                                ${card.course_details.options
+                ? card.course_details.options.map((option) => {
                     return `<option value=""> ${option} </option>`;
                 })
                 : `<option value=""> No Classes </option>`}
@@ -47,9 +47,9 @@ function getCards() {
                             </select>
                         </div>
                         <div class="card-text">
-                            ${card.desc.students ? `${card.desc.students} Students` : ""} 
-                            ${card.desc.dates
-                ? `<span class="hr">${card.desc.dates.start} - ${card.desc.dates.end}</span>`
+                            ${card.course_details.students ? `${card.course_details.students} Students` : ""} 
+                            ${card.course_details.dates
+                ? `<span class="hr">${card.course_details.dates.start} - ${card.course_details.dates.end}</span>`
                 : ""}
                         </div>
                     </div>
@@ -78,3 +78,4 @@ function getCards() {
     });
 }
 getCards();
+//# sourceMappingURL=dashboard.js.map

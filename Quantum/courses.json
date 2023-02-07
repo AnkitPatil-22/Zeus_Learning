@@ -2,7 +2,7 @@
     {
         "favourite": true,
         "image": "./assets/images/imageMask-1.svg",
-        "desc": {
+        "course_details": {
             "title": "Acceleration",
             "subject": "Physics",
             "grade": [7, 8, 9],
@@ -29,7 +29,7 @@
     {
         "favourite": true,
         "image": "./assets/images/imageMask-1.png",
-        "desc": {
+        "course_details": {
             "title": "Displacement, Velocity and Speed",
             "subject": "Physics 2",
             "grade": [6, 7, 8, 9],
@@ -50,7 +50,7 @@
     {
         "favourite": true,
         "image": "./assets/images/imageMask-2.svg",
-        "desc": {
+        "course_details": {
             "title": "Introduction to Biology: Micro organisms and how they affec...",
             "subject": "Biology",
             "grade": [4, 5],
@@ -73,7 +73,7 @@
     {
         "favourite": false,
         "image": "./assets/images/imageMask-2.png",
-        "desc": {
+        "course_details": {
             "title": "Introduction to High School Mathematics",
             "subject": "Mathematics",
             "grade": [8, 9, 10, 11],

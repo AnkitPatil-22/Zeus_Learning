@@ -1,4 +1,4 @@
-interface Desc {
+interface CourseDetails {
     title: string;
     subject: string;
     grade: number[];
@@ -11,7 +11,7 @@ interface Desc {
 export interface Card {
     favourite: boolean;
     image: string;
-    desc: Desc;
+    course_details: CourseDetails;
     expired: boolean;
     footer: {
         preview: true;
