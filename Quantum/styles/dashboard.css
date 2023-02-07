@@ -384,6 +384,10 @@ body {
   position: absolute;
   right: 0;
 }
+.card .card-body .favourite.disable {
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
 .card .card-body .displayImg {
   width: 132px;
   height: 157px;

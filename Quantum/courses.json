@@ -71,7 +71,7 @@
         }
     },
     {
-        "favourite": true,
+        "favourite": false,
         "image": "./assets/images/imageMask-2.png",
         "desc": {
             "title": "Introduction to High School Mathematics",

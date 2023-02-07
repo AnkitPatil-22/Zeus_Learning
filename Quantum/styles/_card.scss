@@ -21,6 +21,11 @@
         .favourite {
             position: absolute;
             right: 0;
+
+            &.disable {
+                filter: grayscale(100%);
+                opacity: 0.3;
+            }
         }
 
         .displayImg {
