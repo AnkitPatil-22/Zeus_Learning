@@ -19,7 +19,12 @@
             }
         },
         "expired": false,
-        "footer": [1, 1, 1, 1]
+        "footer": {
+            "preview": true,
+            "calendar": true,
+            "submission": true,
+            "reports": true
+        }
     },
     {
         "favourite": true,
@@ -32,16 +37,15 @@
                 "units": 2,
                 "lessons": 15,
                 "topics": 20
-            },
-            "options": ["No Classes"],
-            "students": 55,
-            "dates": {
-                "start": "21-Jan-2020",
-                "end": "21-Aug-2020"
             }
         },
         "expired": false,
-        "footer": [1, 0, 0, 1]
+        "footer": {
+            "preview": true,
+            "calendar": false,
+            "submission": false,
+            "reports": true
+        }
     },
     {
         "favourite": true,
@@ -59,7 +63,12 @@
             "students": 300
         },
         "expired": false,
-        "footer": [1, 0, 0, 1]
+        "footer": {
+            "preview": true,
+            "calendar": false,
+            "submission": false,
+            "reports": true
+        }
     },
     {
         "favourite": true,
@@ -81,6 +90,11 @@
             }
         },
         "expired": true,
-        "footer": [1, 1, 1, 1]
+        "footer": {
+            "preview": true,
+            "calendar": true,
+            "submission": true,
+            "reports": true
+        }
     }
 ]

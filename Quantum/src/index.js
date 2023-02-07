@@ -18,8 +18,10 @@ toggleBtn.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
+let url = "./courses.json";
+
 async function getCards() {
-    const response = await fetch("./courses.json");
+    const response = await fetch(url);
     const data = await response.json();
 
     let expired = document.createElement("div");
@@ -46,13 +48,19 @@ async function getCards() {
                             <span class="bold">${card.desc.syllabus.topics}</span> topics                           
                         </div>
                         <div class="select">
-                            <select name="class">
-                                ${card.desc.options.map((option) => {
-                                    return `<option value=""> ${option} </option>`;
-                                })}
+                            <select name="class" class="${card.desc.options ? "" : "disabled"}">
+                                ${
+                                    card.desc.options
+                                        ? card.desc.options.map((option) => {
+                                              return `<option value=""> ${option} </option>`;
+                                          })
+                                        : `<option value=""> No Classes </option>`
+                                }
+                                <option value=""> sdasdsa    </option>
                             </select>
                         </div>
-                        <div class="card-text">${card.desc.students} Students
+                        <div class="card-text">
+                            ${card.desc.students ? `${card.desc.students} Students` : ""} 
                             ${
                                 card.desc.dates
                                     ? `<span class="hr">${card.desc.dates.start} - ${card.desc.dates.end}</span>`
@@ -62,16 +70,16 @@ async function getCards() {
                     </div>
                 </div>
                 <div class="card-footer">
-                    <a href="#" ${!card.footer[0] ? `class= 'disabled'` : ""}>
+                    <a href="#" ${!card.footer.preview ? `class='disabled'` : ""}>
                         <img src="./assets/icons/preview.svg" />
                     </a>
-                    <a href="#" ${!card.footer[1] ? `class= 'disabled'` : ""}>
+                    <a href="#" ${!card.footer.calendar ? `class='disabled'` : ""}>
                         <img src="./assets/icons/manage_course.svg" />
                     </a>
-                    <a href="#" ${!card.footer[2] ? `class= 'disabled'` : ""}>
+                    <a href="#" ${!card.footer.submission ? `class='disabled'` : ""}>
                         <img src="./assets/icons/grade_submissions.svg" />
                     </a>
-                    <a href="#" ${!card.footer[3] ? `class= 'disabled'` : ""}>
+                    <a href="#" ${!card.footer.reports ? `class='disabled'` : ""}>
                         <img src="./assets/icons/reports.svg" />
                     </a>
                 </div>
