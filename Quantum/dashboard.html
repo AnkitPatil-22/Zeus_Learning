@@ -22,24 +22,6 @@
             <a href="#" class="nav-logo"><img src="./assets/icons/logo_header.svg" /></a>
 
             <div>
-                <ul class="navbar-nav">
-                    <li class="navbar-item active">
-                        <a href="#" class="nav-link">DASHBOARD</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">CONTENT</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">USERS</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">REPORTS</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a href="#" class="nav-link">ADMIN</a>
-                    </li>
-                </ul>
-
                 <ul class="alert-icons">
                     <li class="navbar-item dropdown">
                         <a href="#" class="nav-link">
@@ -201,12 +183,73 @@
                             <span class="badge white">T</span>
                         </a>
                     </li>
+                    <li class="navbar-item dropdown hamburger-menu">
+                        <a href="#" class="nav-link">
+                            <img src="./assets/icons/hamburger-menu.svg" />
+                        </a>
+                        <div class="dropdown-content nav-menu">
+                            <div class="">
+                                <a class="" href="#">
+                                    <p class="">DASHBOARD</p>
+                                </a>
+                            </div>
+                            <div class="nav-submenu">
+                                <a class="" href="#">
+                                    <p class="">CONTENT <i class="fa-solid fa-chevron-down"></i></p>
+                                </a>
+                                <ul>
+                                    <li>COURSE CATALOG</li>
+                                </ul>
+                            </div>
+                            <div class="nav-submenu">
+                                <a class="" href="#">
+                                    <p class="">USERS <i class="fa-solid fa-chevron-down"></i></p>
+                                </a>
+                                <ul>
+                                    <li>USER 1</li>
+                                    <li>USER 2</li>
+                                </ul>
+                            </div>
+                            <div class="nav-submenu">
+                                <a class="" href="#">
+                                    <p class="">REPORTS <i class="fa-solid fa-chevron-down"></i></p>
+                                </a>
+                                <ul>
+                                    <li>REPORTS 1</li>
+                                    <li>REPORTS 2</li>
+                                </ul>
+                            </div>
+                            <div class="nav-submenu">
+                                <a class="" href="#">
+                                    <p class="">ADMIN <i class="fa-solid fa-chevron-down"></i></p>
+                                </a>
+                                <ul>
+                                    <li>ADMIN 1</li>
+                                    <li>ADMIN 2</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav">
+                    <li class="navbar-item active">
+                        <a href="#" class="nav-link">DASHBOARD</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">CONTENT</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">USERS</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">REPORTS</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link">ADMIN</a>
+                    </li>
                 </ul>
             </div>
-
-            <button class="hamburger-menu">
-                <img src="./assets/icons/hamburger-menu.svg" />
-            </button>
         </nav>
 
         <div class="dashboard-container">
@@ -248,5 +291,6 @@
             var exports = {};
         </script>
         <script src="dist/dashboard.js"></script>
+        <script src="dist/navbar.js"></script>
     </body>
 </html>

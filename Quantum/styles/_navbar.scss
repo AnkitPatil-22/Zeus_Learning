@@ -12,22 +12,24 @@ nav {
 
     div {
         @include flexCenter(center, center);
+        position: relative;
+    }
+
+    .nav-logo {
+        display: flex;
     }
 
     ::-webkit-scrollbar {
         width: 5px;
     }
-
     /* Track */
     ::-webkit-scrollbar-track {
         background: #f1f1f1;
     }
-
     /* Handle */
     ::-webkit-scrollbar-thumb {
         background: #888;
     }
-
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
         background: #555;
@@ -63,6 +65,7 @@ nav {
 }
 
 .alert-icons {
+    order: 1;
     @include flexCenter(center, center);
     li {
         position: relative;
@@ -71,7 +74,7 @@ nav {
         margin-top: 4px;
         height: 52px;
         width: 50px;
-        @include flexCenter(center, center);
+        @include flexCenter(center, flex-end);
         border-bottom: 4px solid transparent;
 
         a {
@@ -81,13 +84,20 @@ nav {
                 width: 25px;
             }
         }
+
+        &.hamburger-menu {
+            display: none;
+            img {
+                width: 30px;
+            }
+        }
     }
 
     .badge {
         @include flexCenter(center, center);
         position: absolute;
         top: 3px;
-        right: 3px;
+        right: -10px;
         min-width: 18px;
         height: 18px;
         border-radius: 10px;
@@ -105,18 +115,6 @@ nav {
         }
     }
 
-    // li:nth-child(1) a img {
-    //     width: 21px;
-    //     height: 24px;
-    // }
-    li:nth-child(2) a img {
-        width: 20px;
-        // height: 20px;
-    }
-    // li:nth-child(3) a img {
-    //     width: 32px;
-    //     height: 32px;
-    // }
     .navbar-item {
         .dropdown-content {
             position: absolute;
@@ -149,7 +147,7 @@ nav {
                 text-decoration: none;
             }
             a:last-child {
-                margin-bottom: 50px;
+                margin-bottom: 48px;
             }
 
             p {
@@ -189,6 +187,7 @@ nav {
                 background-color: white;
                 bottom: 0;
                 z-index: 999;
+                box-shadow: 0px 1px 6px #0000003d;
 
                 button {
                     background-color: transparent;
@@ -222,62 +221,115 @@ nav {
                 opacity: 1;
             }
         }
+
+        &.dropdown:hover {
+            .nav-link img {
+                filter: brightness(0) invert(1);
+            }
+            .badge {
+                visibility: hidden;
+            }
+        }
+
+        &.hamburger-menu {
+            a:last-child {
+                margin-bottom: 0px;
+            }
+            p:last-child {
+                margin-top: 0px;
+            }
+        }
     }
 
-    .navbar-item.dropdown:hover {
-        .nav-link img {
-            filter: brightness(0) invert(1);
-        }
-        .badge {
-            visibility: hidden;
-        }
+    // li:nth-child(1) a img {
+    //     width: 21px;
+    //     height: 24px;
+    // }
+    li:nth-child(2) a img {
+        width: 20px;
+        // height: 20px;
     }
-}
-
-.nav-logo {
-    display: flex;
-}
-
-.hamburger-menu {
-    display: none;
-    background: transparent;
-    border: none;
+    // li:nth-child(3) a img {
+    //     width: 32px;
+    //     height: 32px;
+    // }
 }
 
 @media screen and (max-width: 1000px) {
     .navbar-nav {
         display: none;
-
-        &.active {
-            display: flex;
-            position: fixed;
-            background: $navBackground;
-            top: 56px;
-            left: 0;
-            width: 100%;
-            flex-direction: column;
-            z-index: 99;
-
-            li {
-                height: 35px;
-                margin: 10px;
-            }
-        }
-    }
-
-    .hamburger-menu {
-        display: block;
-        position: absolute;
-        right: 30px;
-        z-index: 99;
-
-        img {
-            width: 32px;
-        }
     }
 
     .alert-icons {
-        position: absolute;
-        right: 84px;
+        li.hamburger-menu {
+            display: flex;
+        }
+
+        .navbar-item .dropdown-content.nav-menu {
+            a {
+                width: 280px;
+                border: none;
+                &:hover {
+                    background-color: #f3f3f3;
+                }
+            }
+            p {
+                font-size: 14px;
+                color: $darkGreen;
+                @include flexCenter(center, space-between);
+            }
+
+            li {
+                position: static;
+                display: block;
+                margin-left: 16px;
+            }
+
+            .nav-submenu {
+                display: flex;
+                flex-direction: column;
+                font-size: 14px;
+                color: $darkGreen;
+                font-weight: 600;
+
+                i {
+                    transition: 0.3s;
+                }
+
+                ul {
+                    width: 100%;
+                    flex-direction: column;
+                    display: none;
+
+                    li {
+                        width: 100%;
+                        margin: 0;
+                        padding: 16px;
+                        padding-left: 32px;
+
+                        &:hover {
+                            background-color: #f3f3f3;
+                        }
+                    }
+                }
+
+                &.active {
+                    // background-color: #f3f3f3;
+
+                    i {
+                        transform: rotate(180deg);
+                        transition: 0.3s;
+                    }
+                    ul {
+                        display: flex;
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover {
+                    background-color: #f3f3f3;
+                }
+            }
+        }
     }
 }
