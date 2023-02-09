@@ -131,6 +131,7 @@ nav {
             visibility: hidden;
             transition: 0.3s;
             opacity: 0;
+            max-height: 46px;
 
             .messages {
                 display: flex;
@@ -217,8 +218,9 @@ nav {
         &:hover {
             .dropdown-content {
                 visibility: visible;
-                transition: 0.3s;
+                transition: 0.5s;
                 opacity: 1;
+                max-height: 582px;
             }
         }
 
@@ -237,6 +239,18 @@ nav {
             }
             p:last-child {
                 margin-top: 0px;
+            }
+        }
+
+        &.hamburger-menu {
+            .dropdown-content {
+                height: 0;
+            }
+            &:hover {
+                .dropdown-content {
+                    height: fit-content;
+                    transition: 0.7s;
+                }
             }
         }
     }
@@ -299,7 +313,10 @@ nav {
                 ul {
                     width: 100%;
                     flex-direction: column;
-                    display: none;
+                    max-height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: 0.3s;
 
                     li {
                         width: 100%;
@@ -321,8 +338,11 @@ nav {
                         transition: 0.3s;
                     }
                     ul {
-                        display: flex;
                         cursor: pointer;
+                        opacity: 1;
+                        visibility: visible;
+                        max-height: 100vh;
+                        transition: 1s;
                     }
                 }
 

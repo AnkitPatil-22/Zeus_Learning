@@ -167,6 +167,7 @@ nav ::-webkit-scrollbar-thumb:hover {
   visibility: hidden;
   transition: 0.3s;
   opacity: 0;
+  max-height: 46px;
 }
 .alert-icons .navbar-item .dropdown-content .messages {
   display: flex;
@@ -247,8 +248,9 @@ nav ::-webkit-scrollbar-thumb:hover {
 }
 .alert-icons .navbar-item:hover .dropdown-content {
   visibility: visible;
-  transition: 0.3s;
+  transition: 0.5s;
   opacity: 1;
+  max-height: 582px;
 }
 .alert-icons .navbar-item.dropdown:hover .nav-link img {
   filter: brightness(0) invert(1);
@@ -261,6 +263,14 @@ nav ::-webkit-scrollbar-thumb:hover {
 }
 .alert-icons .navbar-item.hamburger-menu p:last-child {
   margin-top: 0px;
+}
+.alert-icons .navbar-item.hamburger-menu .dropdown-content {
+  height: 0;
+}
+.alert-icons .navbar-item.hamburger-menu:hover .dropdown-content {
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: 0.7s;
 }
 .alert-icons li:nth-child(2) a img {
   width: 20px;
@@ -305,7 +315,10 @@ nav ::-webkit-scrollbar-thumb:hover {
   .alert-icons .navbar-item .dropdown-content.nav-menu .nav-submenu ul {
     width: 100%;
     flex-direction: column;
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
   }
   .alert-icons .navbar-item .dropdown-content.nav-menu .nav-submenu ul li {
     width: 100%;
@@ -321,8 +334,11 @@ nav ::-webkit-scrollbar-thumb:hover {
     transition: 0.3s;
   }
   .alert-icons .navbar-item .dropdown-content.nav-menu .nav-submenu.active ul {
-    display: flex;
     cursor: pointer;
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+    transition: 1s;
   }
   .alert-icons .navbar-item .dropdown-content.nav-menu .nav-submenu:hover {
     background-color: #f3f3f3;
