@@ -21,6 +21,7 @@
         .favourite {
             position: absolute;
             right: 0;
+            cursor: pointer;
 
             &.disable {
                 filter: grayscale(100%);

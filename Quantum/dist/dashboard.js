@@ -43,7 +43,6 @@ function getCards() {
                     return `<option value=""> ${option} </option>`;
                 })
                 : `<option value=""> No Classes </option>`}
-                                <option value=""> sdasdsa    </option>
                             </select>
                         </div>
                         <div class="card-text">
@@ -75,7 +74,16 @@ function getCards() {
             }
             gridContainer.appendChild(div);
         });
+        toggleFavourite();
     });
 }
 getCards();
+const toggleFavourite = () => {
+    const favourites = document.querySelectorAll(".favourite");
+    favourites.forEach((fav) => {
+        fav.addEventListener("click", () => {
+            fav.classList.toggle("disable");
+        });
+    });
+};
 //# sourceMappingURL=dashboard.js.map

@@ -42,7 +42,6 @@ async function getCards(): Promise<void> {
                                           })
                                         : `<option value=""> No Classes </option>`
                                 }
-                                <option value=""> sdasdsa    </option>
                             </select>
                         </div>
                         <div class="card-text">
@@ -78,6 +77,17 @@ async function getCards(): Promise<void> {
 
         gridContainer.appendChild(div);
     });
+
+    toggleFavourite();
 }
 
 getCards();
+
+const toggleFavourite = () => {
+    const favourites = document.querySelectorAll(".favourite");
+    favourites.forEach((fav) => {
+        fav.addEventListener("click", () => {
+            fav.classList.toggle("disable");
+        });
+    });
+};
