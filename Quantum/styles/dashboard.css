@@ -618,6 +618,7 @@ body {
 }
 .card .card-footer a.disabled {
   opacity: 0.4;
+  cursor: not-allowed;
 }
 .card .expired {
   display: flex;
