@@ -5,18 +5,14 @@ const gridContainer = document.querySelector(".grid-container") as HTMLDivElemen
 let url = "./courses.json";
 
 async function getCards(): Promise<void> {
-    const response = await fetch(url);
-    const data: Card[] = await response.json();
+   const response = await fetch(url);
+   const data: Card[] = await response.json();
 
-    let expired = document.createElement("div");
-    expired.classList.add("expired");
-    expired.innerHTML = "EXPIRED";
+   data.forEach((card: Card) => {
+      let div = document.createElement("div");
+      div.classList.add("card");
 
-    data.forEach((card: Card) => {
-        let div = document.createElement("div");
-        div.classList.add("card");
-
-        let new_card = `
+      let new_card = `
                 <div class="card-body">
                     <img src="./assets/icons/favourite.svg" class="favourite ${!card.favourite ? "disable" : ""}" />
                     <img src=${card.image} class="displayImg" />
@@ -30,26 +26,26 @@ async function getCards(): Promise<void> {
                             <span class="bold">${card.course_details.syllabus.units}</span> units 
                             <span class="bold">${card.course_details.syllabus.lessons}</span> lessons
                             <span class="bold">${
-                                card.course_details.syllabus.topics
+                               card.course_details.syllabus.topics
                             }</span> topics                           
                         </div>
                         <div class="select">
                             <select name="class" class="${card.course_details.options ? "" : "disabled"}">
                                 ${
-                                    card.course_details.options
-                                        ? card.course_details.options.map((option: string) => {
-                                              return `<option value=""> ${option} </option>`;
-                                          })
-                                        : `<option value=""> No Classes </option>`
+                                   card.course_details.options
+                                      ? card.course_details.options.map((option: string) => {
+                                           return `<option value=""> ${option} </option>`;
+                                        })
+                                      : `<option value=""> No Classes </option>`
                                 }
                             </select>
                         </div>
                         <div class="card-text">
                             ${card.course_details.students ? `${card.course_details.students} Students` : ""} 
                             ${
-                                card.course_details.dates
-                                    ? `<span class="hr">${card.course_details.dates.start} - ${card.course_details.dates.end}</span>`
-                                    : ""
+                               card.course_details.dates
+                                  ? `<span class="hr">${card.course_details.dates.start} - ${card.course_details.dates.end}</span>`
+                                  : ""
                             }
                         </div>
                     </div>
@@ -70,24 +66,27 @@ async function getCards(): Promise<void> {
                 </div>
         `;
 
-        div.innerHTML = new_card;
-        if (card.expired) {
-            div.appendChild(expired);
-        }
+      div.innerHTML = new_card;
+      if (card.expired) {
+         let expired = document.createElement("div");
+         expired.classList.add("expired");
+         expired.innerHTML = "EXPIRED";
+         div.appendChild(expired);
+      }
 
-        gridContainer.appendChild(div);
-    });
+      gridContainer.appendChild(div);
+   });
 
-    toggleFavourite();
+   toggleFavourite();
 }
 
 getCards();
 
 const toggleFavourite = () => {
-    const favourites = document.querySelectorAll(".favourite");
-    favourites.forEach((fav) => {
-        fav.addEventListener("click", () => {
-            fav.classList.toggle("disable");
-        });
-    });
+   const favourites = document.querySelectorAll(".favourite");
+   favourites.forEach((fav) => {
+      fav.addEventListener("click", () => {
+         fav.classList.toggle("disable");
+      });
+   });
 };

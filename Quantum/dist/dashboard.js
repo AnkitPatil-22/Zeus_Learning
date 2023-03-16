@@ -15,9 +15,6 @@ function getCards() {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield fetch(url);
         const data = yield response.json();
-        let expired = document.createElement("div");
-        expired.classList.add("expired");
-        expired.innerHTML = "EXPIRED";
         data.forEach((card) => {
             let div = document.createElement("div");
             div.classList.add("card");
@@ -70,6 +67,9 @@ function getCards() {
         `;
             div.innerHTML = new_card;
             if (card.expired) {
+                let expired = document.createElement("div");
+                expired.classList.add("expired");
+                expired.innerHTML = "EXPIRED";
                 div.appendChild(expired);
             }
             gridContainer.appendChild(div);
